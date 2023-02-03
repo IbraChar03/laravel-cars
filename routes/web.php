@@ -12,3 +12,7 @@ Route::get(
     '/destroy/{id}',
     [MainController::class, "destroyCar"]
 )->name("car.destroy");
+Route::get(
+    '/create',
+    [MainController::class, "createCar"]
+)->name("car.create");

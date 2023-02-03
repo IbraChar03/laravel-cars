@@ -22,4 +22,8 @@ class MainController extends Controller
         return redirect()->route("home");
 
     }
+    public function createCar()
+    {
+        return view("pages.create-car");
+    }
 }

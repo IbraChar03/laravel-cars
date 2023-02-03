@@ -1,6 +1,10 @@
 @extends('layouts.main-layout')
 @section('content')
 <h1>LIST OF CARS</h1>
+<h2>
+    <a href="{{route('car.create')}}">
+        CREATE A NEW CAR</a>
+</h2>
 <ul>
     @foreach ($cars as $car)
     <li>
