@@ -15,4 +15,11 @@ class MainController extends Controller
         ];
         return view("pages.home", $data);
     }
+    public function destroyCar($id)
+    {
+        $car = Car::find($id);
+        $car->delete();
+        return redirect()->route("home");
+
+    }
 }
