@@ -16,3 +16,7 @@ Route::get(
     '/create',
     [MainController::class, "createCar"]
 )->name("car.create");
+Route::post(
+    '/request',
+    [MainController::class, "requestCar"]
+)->name("car.request");

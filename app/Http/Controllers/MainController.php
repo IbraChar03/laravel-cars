@@ -26,4 +26,16 @@ class MainController extends Controller
     {
         return view("pages.create-car");
     }
+    public function requestCar(Request $request)
+    {
+        $data = $request->all();
+        $car = new Car();
+        $car->name = $request["name"];
+        $car->brand = $request["brand"];
+        $car->price = $request["price"];
+        $car->fuel = $request["fuel"];
+        $car->seatsNumber = $request["seatsNumber"];
+        $car->save();
+        return redirect()->route("home");
+    }
 }

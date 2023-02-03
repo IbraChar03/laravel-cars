@@ -1,6 +1,8 @@
 @extends('layouts.main-layout')
 @section('content')
-<form action="">
+<form action="{{route('car.request')}}"
+    method="POST">
+    @csrf
     <label for="name">Car Name:</label>
     <input type="text"
         name="name"> <br> <br>
